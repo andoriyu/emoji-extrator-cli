@@ -15,7 +15,7 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://guides.rubygems.org/specification-reference/ for more options
   gem.name = "emoji-extractor"
-  gem.homepage = "http://github.com/andoriyu/emoji-extractor"
+  gem.homepage = "http://github.com/andoriyu/emoji-extractor-cli"
   gem.license = "MIT"
   gem.summary = %Q{extracts high-resolution emoji pngs from ttf}
   gem.description = %Q{extracts high-resolution emoji pngs from ttf}
