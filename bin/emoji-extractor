@@ -1,0 +1,29 @@
+#!/usr/bin/env ruby
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+require 'optparse'
+require 'optparse/time'
+
+require 'stringio'
+require 'fileutils'
+
+$LOAD_PATH.unshift File.join(File.dirname(__FILE__), '..', 'lib')
+require 'emoji-extractor'
+
+@options = {
+  dst: 'images',
+  file: '/System/Library/Fonts/Apple Color Emoji.ttf'
+}
+OptionParser.new do |opts|
+  opts.banner = "Usage: emoji-extractor [--dst images] [--file /System/Library/Fonts/Apple Color Emoji.ttf]"
+  opts.on("-f", "--file", "File from where extract emoji") do |v|
+    options[:file] = v
+  end
+  opts.on("-d", "--dst", "Where to store the result") do |v|
+    options[:file] = v
+  end
+end.parse!
+
+app = EmojiExtractor.new(@options)
+app.run

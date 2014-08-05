@@ -17,10 +17,11 @@ Jeweler::Tasks.new do |gem|
   gem.name = "emoji-extractor"
   gem.homepage = "http://github.com/andoriyu/emoji-extractor"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{extracts high-resolution emoji pngs from ttf}
+  gem.description = %Q{extracts high-resolution emoji pngs from ttf}
   gem.email = "with.out@me.com"
-  gem.authors = ["Andrey Cherkashin"]
+  gem.authors = ["Andrey Cherkashin", "Aman Gupta"]
+  gem.executables = ['emoji-extractor']
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
